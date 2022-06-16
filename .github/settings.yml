@@ -70,6 +70,8 @@ teams:
     permission: admin
   - name: dev
     permission: push
+  - name: product
+    permission: pull
 
 branches:
   - name: main
