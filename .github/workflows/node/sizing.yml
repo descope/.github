@@ -1,0 +1,28 @@
+name: sizing
+
+on: [pull_request]
+
+env:
+  NODE_VERSION: 16.14
+
+inputs:
+  build_script:
+    description: custom npm script to run instead of the default build
+    required: true
+    default: build
+
+jobs:
+  sizing:
+    name: 🏋️ Sizing
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+      - name: Setup
+        uses: ./.github/actions/setup
+        with:
+          node_version: ${{ env.NODE_VERSION }}
+      - uses: andresz1/size-limit-action@v1
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          build_script: ${{ inputs.build_script }}
