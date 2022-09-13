@@ -17,7 +17,7 @@ inputs:
     description: List of build args
     required: false
   token:
-    description: Registrey Token
+    description: Registry Token
     required: true
 
 outputs:
