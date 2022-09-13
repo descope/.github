@@ -9,13 +9,16 @@ inputs:
     default: ${{ github.repository }}
   push:
     description: Push docker image?
-    required: true
+    required: false
   context:
     description: Docker context path
     default: "."
   build-args:
     description: List of build args
     required: false
+  token:
+    description: Registrey Token
+    required: true
 
 outputs:
   docker-tags:
@@ -29,11 +32,12 @@ runs:
   using: composite
   steps:
     - name: Docker setup
-      uses: descope/.github/.github/actions/docker/setup@main
+      uses: descope/.github/.github/actions/docker/setup@fix
       id: setup
       with:
         registry: ${{ inputs.registry }}
         image-name: ${{ inputs.image-name }}
+        token: ${{ inputs.token }}
 
     - name: Build and push Docker image
       uses: docker/build-push-action@v3
