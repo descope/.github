@@ -4,6 +4,9 @@ inputs:
   registry:
     description: Docker Registry
     default: ghcr.io
+  token:
+    description: Docker token
+    required: true
   image-name:
     description: Docker Image Name
     default: ${{ github.repository }}
@@ -25,7 +28,7 @@ runs:
       with:
         registry: ${{ inputs.registry }}
         username: ${{ github.actor }}
-        password: ${{ secrets.GITHUB_TOKEN }}
+        password: ${{ inputs.token }}
 
     - name: Extract metadata (tags, labels) for Docker
       id: meta
