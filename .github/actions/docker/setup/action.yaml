@@ -1,0 +1,34 @@
+name: Docker Setup
+description: Common docker setup steps
+inputs:
+  registry:
+    description: Docker Registry
+    default: ghcr.io
+  image-name:
+    description: Docker Image Name
+    default: ${{ github.repository }}
+outputs:
+  tags:
+    description: Docker tags
+    value: ${{ steps.meta.outputs.tags }}
+  labels:
+    description: Docker labels
+    value: ${{ steps.meta.outputs.labels }}
+runs:
+  using: composite
+  steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    - name: Log in to the Container registry
+      uses: docker/login-action@v2
+      with:
+        registry: ${{ inputs.registry }}
+        username: ${{ github.actor }}
+        password: ${{ secrets.GITHUB_TOKEN }}
+
+    - name: Extract metadata (tags, labels) for Docker
+      id: meta
+      uses: docker/metadata-action@v4
+      with:
+        images: ${{ inputs.registry }}/${{ inputs.image-name }}

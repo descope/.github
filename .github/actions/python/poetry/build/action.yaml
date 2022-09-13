@@ -1,0 +1,8 @@
+name: Poetry Build
+description: Build python package
+runs:
+  using: composite
+  steps:
+    - name: Build
+      shell: bash
+      run: poetry build
