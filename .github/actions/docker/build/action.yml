@@ -1,0 +1,45 @@
+name: Docker Build
+description: Build Docker Image
+inputs:
+  registry:
+    description: Docker Registry
+    default: ghcr.io
+  image-name:
+    description: Docker Image Name
+    default: ${{ github.repository }}
+  push:
+    description: Push docker image?
+    required: true
+  context:
+    description: Docker context path
+    default: "."
+  build-args:
+    description: List of build args
+    required: false
+
+outputs:
+  docker-tags:
+    description: Docker tags
+    value: ${{ steps.meta.outputs.tags }}
+  docker-labels:
+    description: Docker labels
+    value: ${{ steps.meta.outputs.labels }}
+
+runs:
+  using: composite
+  steps:
+    - name: Docker setup
+      uses: .github/actions/docker/setup
+      id: setup
+      with:
+        registry: ${{ inputs.registry }}
+        image-name: ${{ inputs.image-name }}
+
+    - name: Build and push Docker image
+      uses: docker/build-push-action@v3
+      with:
+        build-args: ${{ inputs.build-args }}
+        context: ${{ inputs.context }}
+        push: ${{ inputs.push }}
+        tags: ${{ steps.setup.outputs.tags }}
+        labels: ${{ steps.setup.outputs.labels }}
