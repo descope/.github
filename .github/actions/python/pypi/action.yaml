@@ -1,0 +1,21 @@
+name: Poetry Build
+description: Build python package
+inputs:
+  token:
+    description: Pypi API Token
+    required: true
+  test:
+    description: Publish to Pypi Test
+    required: false
+    default: "no"
+runs:
+  using: composite
+  steps:
+    - name: Publish a Python distribution to PyPI
+      uses: pypa/gh-action-pypi-publish@release/v1
+      with:
+        password: ${{ inputs.token }}
+        print_hash: true
+        verbose: true
+        if: inputs.test != "no"
+        repository_url: https://test.pypi.org/legacy/
