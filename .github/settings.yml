@@ -4,7 +4,7 @@ repository:
   # See https://docs.github.com/en/rest/reference/repos#update-a-repository for all available settings.
 
   # Either `true` to enable issues for this repository, `false` to disable them.
-  has_issues: false
+  has_issues: true
 
   # Either `true` to enable projects for this repository, or `false` to disable them.
   # If projects are disabled for the organization, passing `true` will cause an API error.
