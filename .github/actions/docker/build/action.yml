@@ -29,7 +29,7 @@ runs:
   using: composite
   steps:
     - name: Docker setup
-      uses: .github/actions/docker/setup
+      uses: .github/actions/docker/setup@main
       id: setup
       with:
         registry: ${{ inputs.registry }}
