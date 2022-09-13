@@ -1,5 +1,5 @@
-name: Poetry Build
-description: Build python package
+name: Pypi publish
+description: Publish
 inputs:
   token:
     description: Pypi API Token
