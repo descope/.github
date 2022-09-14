@@ -40,7 +40,12 @@ runs:
       shell: bash
       run: poetry run black --check ${{ steps.filter.outputs.py_modified_files }}
 
-    - name: Run flake8
+    - name: flake8
       if: ${{ steps.filter.outputs.py_modified == 'true' }}
       shell: bash
       run: poetry run flake8 ${{ steps.filter.outputs.py_modified_files }}
+
+    - name: isort
+      if: ${{ steps.filter.outputs.py_modified == 'true' }}
+      shell: bash
+      run: poetry run isort --check --diff --profile black ${{ steps.filter.outputs.py_modified_files }}
