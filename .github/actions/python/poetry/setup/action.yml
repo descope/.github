@@ -1,5 +1,8 @@
 name: Poetry Setup
 description: Basic python setup with Poetry
+inputs:
+  python-version:
+    description: Python version to use. Reads from .python-version if unset.
 runs:
   using: composite
   steps:
@@ -20,13 +23,12 @@ runs:
             - added|modified: "./**/*.py"
 
     - name: Setup Python
-      if: ${{ steps.filter.outputs.py_modified == 'true' }}
       uses: actions/setup-python@v4
       with:
+        python-version: ${{ inputs.python-version }}
         cache: "poetry"
 
     - name: Install dependencies
-      if: ${{ steps.filter.outputs.py_modified == 'true' }}
       shell: bash
       run: |
         poetry install
@@ -36,7 +38,12 @@ runs:
       shell: bash
       run: poetry run black --check ${{ steps.filter.outputs.py_modified_files }}
 
-    - name: Run flake8
+    - name: flake8
       if: ${{ steps.filter.outputs.py_modified == 'true' }}
       shell: bash
       run: poetry run flake8 ${{ steps.filter.outputs.py_modified_files }}
+
+    - name: isort
+      if: ${{ steps.filter.outputs.py_modified == 'true' }}
+      shell: bash
+      run: poetry run isort --check --diff --profile black ${{ steps.filter.outputs.py_modified_files }}
