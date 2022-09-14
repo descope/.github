@@ -1,0 +1,23 @@
+name: Poetry publish
+description: Publish
+inputs:
+  token:
+    description: Pypi API Token
+    required: true
+  test:
+    description: Publish to Pypi Test
+    required: false
+    default: "no"
+runs:
+  using: composite
+  steps:
+    - if: inputs.test == true
+      name: Test PyPi
+      shell: bash
+      run: |
+        poetry config repositories.pypi https://test.pypi.org/legacy/
+    - name: Publish
+      shell: bash
+      run: |
+        poerty config pypi-token.pypi ${{ inputs.token }}
+        poetry publish

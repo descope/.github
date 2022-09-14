@@ -1,5 +1,8 @@
 name: Poetry Setup
 description: Basic python setup with Poetry
+inputs:
+  python-version:
+    description: Python version to use. Reads from .python-version if unset.
 runs:
   using: composite
   steps:
@@ -23,6 +26,7 @@ runs:
       if: ${{ steps.filter.outputs.py_modified == 'true' }}
       uses: actions/setup-python@v4
       with:
+        python-version: ${{ inputs.python-version }}
         cache: "poetry"
 
     - name: Install dependencies
