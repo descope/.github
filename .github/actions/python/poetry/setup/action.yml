@@ -23,14 +23,12 @@ runs:
             - added|modified: "./**/*.py"
 
     - name: Setup Python
-      if: ${{ steps.filter.outputs.py_modified == 'true' }}
       uses: actions/setup-python@v4
       with:
         python-version: ${{ inputs.python-version }}
         cache: "poetry"
 
     - name: Install dependencies
-      if: ${{ steps.filter.outputs.py_modified == 'true' }}
       shell: bash
       run: |
         poetry install
