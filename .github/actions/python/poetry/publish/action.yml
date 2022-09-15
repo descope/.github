@@ -11,8 +11,8 @@ inputs:
 runs:
   using: composite
   steps:
-    - if: inputs.test == true
-      name: Test PyPi
+    - name: Test PyPi
+      if: inputs.test == "true"
       shell: bash
       run: |
         poetry config repositories.pypi https://test.pypi.org/legacy/
