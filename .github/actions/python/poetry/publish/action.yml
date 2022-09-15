@@ -10,7 +10,9 @@ inputs:
 runs:
   using: composite
   steps:
-    - name: Test PyPi
+    - shell: bash
+      run: poetry config repositories.pypi https://upload.pypi.org/legacy/
+    - name: Use Test PyPi Repo
       if: inputs.test != ''
       shell: bash
       run: |
@@ -19,4 +21,4 @@ runs:
       shell: bash
       run: |
         poetry config pypi-token.pypi ${{ inputs.token }}
-        poetry publish
+        poetry publish -r pypi
