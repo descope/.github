@@ -6,13 +6,12 @@ inputs:
     required: true
   test:
     description: Publish to Pypi Test
-    required: false
-    default: "no"
+
 runs:
   using: composite
   steps:
     - name: Test PyPi
-      if: inputs.test == "true"
+      if: inputs.test != ''
       shell: bash
       run: |
         poetry config repositories.pypi https://test.pypi.org/legacy/
