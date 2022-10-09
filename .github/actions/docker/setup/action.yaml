@@ -35,7 +35,7 @@ runs:
       with:
         aws-region: ${{ inputs.ecr_region }}
         role-to-assume: arn:aws:iam::${{ inputs.ecr_aws_account }}:role/GitHubActionsECR
-        role-session-name: ${{ inputs.image-name }}-${{ github.run_number }}@${{ github.run_attempt }}
+        role-session-name: ${{ github.event.repository.name }}-${{ github.run_number }}@${{ github.run_attempt }}
 
     - name: Login to Amazon ECR Private
       id: login-ecr
