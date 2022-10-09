@@ -29,7 +29,7 @@ runs:
   using: composite
   steps:
     - name: Docker setup
-      uses: descope/.github/.github/actions/docker/setup@feat/ecr
+      uses: descope/.github/.github/actions/docker/setup@main
       id: setup
       with:
         image-name: ${{ inputs.image-name }}
