@@ -1,11 +1,17 @@
 name: Docker Setup
 description: Common docker setup steps
 inputs:
+  ecr_aws_account:
+    description: ECR AWS Account Number
+    default: "601853031418" # Devops Account
+  ecr_region:
+    description: ECR Region
+    default: eu-central-1
   registry:
     description: Docker Registry
     default: ghcr.io
-  token:
-    description: Docker token
+  ghcr_token:
+    description: GitHub Container Registry Token
     required: true
   image-name:
     description: Docker Image Name
@@ -17,21 +23,44 @@ outputs:
   labels:
     description: Docker labels
     value: ${{ steps.meta.outputs.labels }}
+
 runs:
   using: composite
   steps:
     - name: Checkout repository
       uses: actions/checkout@v3
 
-    - name: Log in to the Container registry
+    - name: Configure AWS credentials
+      uses: aws-actions/configure-aws-credentials@v1
+      with:
+        aws-region: ${{ inputs.ecr_region }}
+        role-to-assume: arn:aws:iam::${{ inputs.ecr_aws_account }}:role/GitHubActionsECR
+        role-session-name: ${{ inputs.image-name }}-${{ github.run_number }}@${{ github.run_attempt }}
+
+    - name: Login to Amazon ECR Private
+      id: login-ecr
+      uses: aws-actions/amazon-ecr-login@v1
+
+    - name: Log in to GHCR
       uses: docker/login-action@v2
       with:
-        registry: ${{ inputs.registry }}
+        registry: ghcr.io
         username: ${{ github.actor }}
-        password: ${{ inputs.token }}
+        password: ${{ inputs.ghcr_token }}
 
     - name: Extract metadata (tags, labels) for Docker
       id: meta
       uses: docker/metadata-action@v4
       with:
-        images: ${{ inputs.registry }}/${{ inputs.image-name }}
+        images: |
+          ${{ inputs.registry }}/${{ inputs.image-name }}
+          ${{ steps.login-ecr.outputs.registry }}/${{ inputs.image-name }}
+        tags: |
+          type=ref,event=branch
+          type=raw,value=ci-${{github.run_number}},event=branch
+          type=raw,value={{branch}}-{{date 'YYYY.M.D'}}-${{github.run_number}},event=branch         
+          type=raw,value={{branch}}-{{date 'YYYY.M.D'}}-{{sha}},event=branch         
+          type=raw,value={{branch}}-{{sha}}
+          type=raw,value={{branch}}-${{github.run_number}}           
+          type=raw,value=sha-{{sha}}
+          type=raw,value=latest,enable={{is_default_branch}}
