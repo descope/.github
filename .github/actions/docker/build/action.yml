@@ -16,6 +16,11 @@ inputs:
   ghcr_token:
     description: GitHub Container Registry Token
     required: true
+  ecr_account:
+    description: ECR AWS Account Number
+  ecr_region:
+    description: ECR Region
+    default: eu-central-1
 
 outputs:
   docker-tags:
@@ -34,6 +39,36 @@ runs:
       with:
         image-name: ${{ inputs.image-name }}
         ghcr_token: ${{ inputs.ghcr_token }}
+        ecr_account: ${{ inputs.ecr_account }}
+        ecr_region: ${{ inputs.ecr_region }}
+
+    - name: Set image name
+      shell: bash
+      run: echo "image_name=${{ inputs.registry }}/${{ inputs.image-name }}" >> $GITHUB_ENV
+
+    - name: Set image names
+      if: ${{ inputs.ecr_account }}
+      shell: bash
+      run: |
+        echo 'image_name<<EOF'
+        echo "${{ inputs.registry }}/${{ inputs.image-name }}" >> $GITHUB_ENV
+        echo "${{ steps.setup.outputs.ecr_registry}}/${{ inputs.image-name }}" >> $GITHUB_ENV
+        echo 'EOF' >> $GITHUB_ENV
+
+    - name: Extract metadata (tags, labels) for Docker
+      id: meta
+      uses: docker/metadata-action@v4
+      with:
+        images: ${{ env.image_name }}
+        tags: |
+          type=ref,event=branch
+          type=raw,value=ci-${{github.run_number}},event=branch
+          type=raw,value={{branch}}-{{date 'YYYY.M.D'}}-${{github.run_number}},event=branch         
+          type=raw,value={{branch}}-{{date 'YYYY.M.D'}}-{{sha}},event=branch         
+          type=raw,value={{branch}}-{{sha}}
+          type=raw,value={{branch}}-${{github.run_number}}           
+          type=raw,value=sha-{{sha}}
+          type=raw,value=latest,enable={{is_default_branch}}
 
     - name: Build and push Docker image
       uses: docker/build-push-action@v3
@@ -41,5 +76,5 @@ runs:
         build-args: ${{ inputs.build-args }}
         context: ${{ inputs.context }}
         push: ${{ inputs.push }}
-        tags: ${{ steps.setup.outputs.tags }}
-        labels: ${{ steps.setup.outputs.labels }}
+        tags: ${{ steps.meta.outputs.tags }}
+        labels: ${{ steps.meta.outputs.labels }}
