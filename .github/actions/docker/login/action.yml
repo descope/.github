@@ -7,15 +7,13 @@ inputs:
   push:
     description: Push docker image?
     required: false
+    default: "false"
   context:
     description: Docker context path
     default: "."
   build-args:
     description: List of build args
     required: false
-  ghcr_token:
-    description: GitHub Container Registry Token
-    required: true
 
 outputs:
   docker-tags:
@@ -28,12 +26,20 @@ outputs:
 runs:
   using: composite
   steps:
-    - name: Docker setup
-      uses: descope/.github/.github/actions/docker/setup@main
-      id: setup
+    - name: Extract metadata (tags, labels) for Docker
+      id: meta
+      uses: docker/metadata-action@v4
       with:
-        image-name: ${{ inputs.image-name }}
-        ghcr_token: ${{ inputs.ghcr_token }}
+        images: ${{ inputs.image-name }}
+        tags: |
+          type=ref,event=branch
+          type=raw,value=ci-${{github.run_number}},event=branch
+          type=raw,value={{branch}}-{{date 'YYYY.M.D'}}-${{github.run_number}},event=branch         
+          type=raw,value={{branch}}-{{date 'YYYY.M.D'}}-{{sha}},event=branch         
+          type=raw,value={{branch}}-{{sha}}
+          type=raw,value={{branch}}-${{github.run_number}}           
+          type=raw,value=sha-{{sha}}
+          type=raw,value=latest,enable={{is_default_branch}}
 
     - name: Build and push Docker image
       uses: docker/build-push-action@v3
@@ -41,5 +47,5 @@ runs:
         build-args: ${{ inputs.build-args }}
         context: ${{ inputs.context }}
         push: ${{ inputs.push }}
-        tags: ${{ steps.setup.outputs.tags }}
-        labels: ${{ steps.setup.outputs.labels }}
+        tags: ${{ steps.meta.outputs.tags }}
+        labels: ${{ steps.meta.outputs.labels }}
