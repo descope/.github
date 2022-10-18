@@ -5,16 +5,12 @@ inputs:
     description: ECR AWS Account Number
   ecr_region:
     description: ECR Region
-    default: eu-central-1
-  registry:
+  ghcr_registry:
     description: Docker Registry
     default: ghcr.io
   ghcr_token:
     description: GitHub Container Registry Token
     required: true
-  image-name:
-    description: Docker Image Name
-    default: ${{ github.repository }}
 outputs:
   ecr_registry:
     description: ECR Registry Hostname

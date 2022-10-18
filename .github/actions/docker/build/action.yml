@@ -13,14 +13,6 @@ inputs:
   build-args:
     description: List of build args
     required: false
-  ghcr_token:
-    description: GitHub Container Registry Token
-    required: true
-  ecr_account:
-    description: ECR AWS Account Number
-  ecr_region:
-    description: ECR Region
-    default: eu-central-1
 
 outputs:
   docker-tags:
@@ -33,15 +25,6 @@ outputs:
 runs:
   using: composite
   steps:
-    - name: Docker setup
-      uses: descope/.github/.github/actions/docker/setup@main
-      id: setup
-      with:
-        image-name: ${{ inputs.image-name }}
-        ghcr_token: ${{ inputs.ghcr_token }}
-        ecr_account: ${{ inputs.ecr_account }}
-        ecr_region: ${{ inputs.ecr_region }}
-
     - name: Set image name
       shell: bash
       run: echo "image_name=${{ inputs.registry }}/${{ inputs.image-name }}" >> $GITHUB_ENV
