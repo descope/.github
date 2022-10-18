@@ -25,24 +25,11 @@ outputs:
 runs:
   using: composite
   steps:
-    - name: Set image name
-      shell: bash
-      run: echo "image_name=${{ inputs.registry }}/${{ inputs.image-name }}" >> $GITHUB_ENV
-
-    - name: Set image names
-      if: ${{ inputs.ecr_account }}
-      shell: bash
-      run: |
-        echo 'image_name<<EOF'
-        echo "${{ inputs.registry }}/${{ inputs.image-name }}" >> $GITHUB_ENV
-        echo "${{ steps.setup.outputs.ecr_registry}}/${{ inputs.image-name }}" >> $GITHUB_ENV
-        echo 'EOF' >> $GITHUB_ENV
-
     - name: Extract metadata (tags, labels) for Docker
       id: meta
       uses: docker/metadata-action@v4
       with:
-        images: ${{ env.image_name }}
+        images: ${{ inputs.image_name }}
         tags: |
           type=ref,event=branch
           type=raw,value=ci-${{github.run_number}},event=branch
