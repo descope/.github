@@ -1,0 +1,4 @@
+{
+  "name": "Require linked issue",
+  "description": "Require pull requests to have linked issues"
+}
