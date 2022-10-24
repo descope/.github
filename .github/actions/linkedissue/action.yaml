@@ -1,0 +1,13 @@
+name: Require linked issue
+description: Require linked issue
+runs:
+  using: composite
+  steps:
+    - uses: nearform/github-action-check-linked-issues@v1
+      id: check-linked-issues
+      with:
+        exclude-branches: "release/**, dependabot/**"
+      # OPTIONAL: Use the output from the `check-linked-issues` step
+    - name: Get the output
+      shell: bash
+      run: echo "How many linked issues? ${{ steps.check-linked-issues.outputs.linked_issues_count }}"
