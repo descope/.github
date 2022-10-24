@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     name: Check linked issues
     steps:
-      - uses: nearform/github-action-check-linked-issues@v1
+      - uses: descope/.github/.github/actions/linkedissue@main
         id: check-linked-issues
         with:
           exclude-branches: "release/**, dependabot/**"
