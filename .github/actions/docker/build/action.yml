@@ -44,7 +44,7 @@ runs:
     - name: Fetch commit message
       shell: bash
       id: commit-message
-      run: echo commit-message="$(git log -1 HEAD --pretty=format:%s)" >> $$GITHUB_OUTPUT
+      run: echo message="$(git log -1 HEAD --pretty=format:%s)" >> $GITHUB_OUTPUT
 
     - name: Build and push Docker image
       uses: docker/build-push-action@v3
@@ -55,4 +55,4 @@ runs:
         tags: ${{ steps.meta.outputs.tags }}
         labels: |
           ${{ steps.meta.outputs.labels }}
-          org.opencontainers.image.description=${{steps.commit-message.outputs.commit-message}}
+          org.opencontainers.image.description=${{steps.commit-message.outputs.message}}
