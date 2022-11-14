@@ -41,6 +41,11 @@ runs:
           type=raw,value=sha-{{sha}}
           type=raw,value=latest,enable={{is_default_branch}}
 
+    - name: Fetch commit message
+      shell: bash
+      id: commit-message
+      run: echo commit-message="$(git log -1 HEAD --pretty=format:%s)" >> $$GITHUB_OUTPUT
+
     - name: Build and push Docker image
       uses: docker/build-push-action@v3
       with:
@@ -48,4 +53,6 @@ runs:
         context: ${{ inputs.context }}
         push: ${{ inputs.push }}
         tags: ${{ steps.meta.outputs.tags }}
-        labels: ${{ steps.meta.outputs.labels }}
+        labels: |
+          ${{ steps.meta.outputs.labels }}
+          org.opencontainers.image.description=${{steps.commit-message.outputs.commit-message}}
