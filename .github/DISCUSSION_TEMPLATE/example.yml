@@ -1,50 +1,53 @@
+---
 title: "[Example] "
-labels: ["test"]
+labels:
+  - test
 body:
-- type: markdown
-  value: "## Welcome!"
-- type: markdown
-  attributes:
-    value: |
-      Thanks for taking the time to start a new discussion! If you need real-time help, join us on Discord.
-- type: input
-  id: suggestion
-  attributes:
-    label: Suggestion
-    description: "How might we make this project better?"
-    placeholder: "Adding a CODE_OF_CONDUCT.md file would be a great idea."
-  validations:
-    required: true
-- type: textarea
-  id: improvements
-  attributes:
-    label: Top 3 improvements
-    description: "What are the top 3 improvements we could make to this project?"
-    value: |
-      1.
-      2.
-      3.
-      ...
-    render: bash
-  validations:
-    required: true
-- type: dropdown
-  id: download
-  attributes:
-    label: Which area of this project could be most improved?
-    options:
-      - Documentation
-      - Pull request review time
-      - Bug fix time
-      - Release cadence
-  validations:
-    required: true    
-- type: checkboxes
-  id: cat-preferences
-  attributes:
-    label: What kinds of cats do you like?
-    description: You may select more than one.
-    options:
-      - label: Orange cat (required. Everyone likes orange cats.)
-        required: true
-      - label: **Black cat**
+  - type: markdown
+    value: "## Welcome!"
+  - type: markdown
+    attributes:
+      value: >
+        Thanks for taking the time to start a new discussion! If you need
+        real-time help, join us on Discord.
+  - type: input
+    id: suggestion
+    attributes:
+      label: Suggestion
+      description: How might we make this project better?
+      placeholder: Adding a CODE_OF_CONDUCT.md file would be a great idea.
+    validations:
+      required: true
+  - type: textarea
+    id: improvements
+    attributes:
+      label: Top 3 improvements
+      description: What are the top 3 improvements we could make to this project?
+      value: |
+        1.
+        2.
+        3.
+        ...
+      render: bash
+    validations:
+      required: true
+  - type: dropdown
+    id: download
+    attributes:
+      label: Which area of this project could be most improved?
+      options:
+        - Documentation
+        - Pull request review time
+        - Bug fix time
+        - Release cadence
+    validations:
+      required: true
+  - type: checkboxes
+    id: cat-preferences
+    attributes:
+      label: What kinds of cats do you like?
+      description: You may select more than one.
+      options:
+        - label: Orange cat (required. Everyone likes orange cats.)
+          required: true
+        - label: "**Black cat**"
