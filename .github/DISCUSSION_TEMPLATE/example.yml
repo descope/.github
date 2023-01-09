@@ -1,10 +1,10 @@
----
 title: "[Example] "
 labels:
   - test
 body:
   - type: markdown
-    value: "## Welcome!"
+    attributes:
+      value: "## Welcome!"
   - type: markdown
     attributes:
       value: >
