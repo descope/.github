@@ -1,4 +1,5 @@
 title: "[Example - Add an easter egg in the Authentication Methods page!]"
+labels: new
 body:
   - type: markdown
     attributes:
