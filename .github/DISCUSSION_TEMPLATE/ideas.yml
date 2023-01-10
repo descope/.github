@@ -49,8 +49,8 @@ body:
       label: Labels
       description: Label the idea according to the feature it relates to (e.g. SDK, flows & screens...). If you are having trouble deciding, you can always label the idea as `other`.
       options:
-        label: I have labelled the idea
-        required: true        
+        - label: I have labelled the idea
+          required: true        
         
         
         
