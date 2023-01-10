@@ -8,46 +8,50 @@ body:
   - type: markdown
     attributes:
       value: >
-        Thanks for taking the time to start a new discussion! If you need
-        real-time help, join us on Discord.
-  - type: input
-    id: suggestion
+        Thanks for taking the time to submit a new feature request to make Descope better!
+        If you need real-time help, join us on Discord.
+  - type: markdown
     attributes:
-      label: Suggestion
-      description: How might we make this project better?
-      placeholder: Adding a CODE_OF_CONDUCT.md file would be a great idea.
+      value: >
+        Please first make sure that the feature you are requesting wasn't already submitted by a felow Descoper.
+        You can do so by searching over all Descope Ideas in the portal.
+        Is it already submitted? **Make sure to upvote it!** That's how we know what's most important for as many Descopers as possible 🙏🏼
+  - type: input
+    attributes:
+      label: Title
+      description: What's your idea?
+      placeholder: Add an easter egg in the Authentication Methods page!
     validations:
       required: true
   - type: textarea
-    id: improvements
+    id: Description
     attributes:
-      label: Top 3 improvements
-      description: What are the top 3 improvements we could make to this project?
-      value: |
-        1.
-        2.
-        3.
-        ...
-      render: bash
+      label: Description
+      placeholder: If the Descoper finds the hidden method - present them with a gif!
+      description: 
+      value: >
+        When writing your idea, try to cover the following:
+        * What is the problem you are trying to solve?
+        * What solution did you envision for that problem?
+        
+        You can give a very detailed explanation, or make it simple, up to you.
+        **The more information** - along with supporting elements such as images - **the better we will all understand and help!**
     validations:
       required: true
-  - type: dropdown
-    id: download
+  - type: markdown
     attributes:
-      label: Which area of this project could be most improved?
-      options:
-        - Documentation
-        - Pull request review time
-        - Bug fix time
-        - Release cadence
-    validations:
-      required: true
+      value: >
+        Please first make sure that the feature you are requesting wasn't already submitted by a felow Descoper.
+        You can do so by searching over all Descope Ideas in the portal.
+        Is it already submitted? **Make sure to upvote it!** That's how we know what's most important for as many Descopers as possible 🙏🏼
   - type: checkboxes
-    id: cat-preferences
     attributes:
-      label: What kinds of cats do you like?
-      description: You may select more than one.
+      label: Labels
+      description: Label the idea according to the feature it relates to (e.g. SDK, flows & screens...). If you are having trouble deciding, you can always label the idea as `other`.
       options:
-        - label: Orange cat (required. Everyone likes orange cats.)
-          required: true
-        - label: "**Black cat**"
+        label: I have labelled the idea
+        required: true        
+        
+        
+        
+        
