@@ -20,7 +20,6 @@ body:
   - type: input
     attributes:
       label: Title
-      description: What's your idea?
       placeholder: Add an easter egg in the Authentication Methods page!
     validations:
       required: true
@@ -32,6 +31,7 @@ body:
         * What is the problem you are trying to solve?
         
         * What solution did you envision for that problem?
+        
         
         You can give a very detailed explanation, or make it simple, up to you.
         
