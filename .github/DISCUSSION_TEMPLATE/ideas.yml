@@ -1,6 +1,4 @@
-title: "[Example] "
-labels:
-  - test
+title: "[Example - Add an easter egg in the Authentication Methods page!]"
 body:
   - type: markdown
     attributes:
@@ -17,12 +15,6 @@ body:
         You can do so by searching over all Descope Ideas in the portal.
         
         Is it already submitted? **Make sure to upvote it!** That's how we know what's most important for as many Descopers as possible 🙏🏼
-  - type: input
-    attributes:
-      label: Title
-      placeholder: Add an easter egg in the Authentication Methods page!
-    validations:
-      required: true
   - type: markdown
     attributes:
       value: >
