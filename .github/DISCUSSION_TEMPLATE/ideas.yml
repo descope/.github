@@ -37,8 +37,8 @@ body:
         You can give a very detailed explanation, or make it simple, up to you.
         **The more information** - along with supporting elements such as images - **the better we will all understand and help!**
       placeholder: If the Descoper finds the hidden method - present them with a gif!
-      validations:
-        required: true
+    validations:
+      required: true
   - type: checkboxes
     attributes:
       label: Labels
