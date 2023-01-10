@@ -28,8 +28,7 @@ body:
     id: Description
     attributes:
       label: Description
-      description: If the Descoper finds the hidden method - present them with a gif!
-      placeholder: >
+      description: >
         When writing your idea, try to cover the following:
 
         * What is the problem you are trying to solve?
@@ -37,8 +36,9 @@ body:
         
         You can give a very detailed explanation, or make it simple, up to you.
         **The more information** - along with supporting elements such as images - **the better we will all understand and help!**
-    validations:
-      required: true
+      placeholder: If the Descoper finds the hidden method - present them with a gif!
+      validations:
+        required: true
   - type: checkboxes
     attributes:
       label: Labels
