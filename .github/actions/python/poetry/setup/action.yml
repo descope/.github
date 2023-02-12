@@ -6,9 +6,6 @@ inputs:
 runs:
   using: composite
   steps:
-    - name: Checkout
-      uses: actions/checkout@v3
-   
     - name: Get changed files
       uses: dorny/paths-filter@v2
       id: filter
