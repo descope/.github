@@ -15,20 +15,21 @@ runs:
           py_modified:  
             - added|modified: "./**/*.py"
 
+    - name: Install and configure Poetry # This step must run before setup-python due to bug in the action (see https://github.com/actions/setup-python/issues/369)
+      uses: snok/install-poetry@v1
+    
     - name: Setup Python
       uses: actions/setup-python@v4
       id: setup-python
       with:
         python-version: ${{ inputs.python-version }}
-        cache: 'poetry'
-
-    - name: Install and configure Poetry
-      uses: snok/install-poetry@v1
+        cache: 'poetry'   
 
     - name: Install dependencies
       shell: bash
       if: steps.setup-python.outputs.cache-hit != 'true'
       run: |
+        poetry env use ${{ inputs.python-version }}
         poetry install
 
     - name: Black
