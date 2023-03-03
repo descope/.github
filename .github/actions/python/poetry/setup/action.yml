@@ -29,7 +29,6 @@ runs:
       shell: bash
       if: steps.setup-python.outputs.cache-hit != 'true'
       run: |
-        poetry env use ${{ inputs.python-version }}
         poetry install
 
     - name: Validate poetry lock
