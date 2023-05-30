@@ -1,0 +1,49 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "config:base",
+    ":preserveSemverRanges",
+    ":combinePatchMinorReleases",
+    ":rebaseStalePrs",
+    "workarounds:all",
+    "group:monorepos",
+    "group:recommended"
+  ],
+  "ignorePaths": [
+    "**/node_modules/**",
+    "**/bower_components/**",
+    "**/vendor/**",
+    "**/examples/**",
+    "**/__tests__/**",
+    "**/test/**",
+    "**/tests/**",
+    "**/__fixtures__/**"
+  ],
+  "prHourlyLimit": 0,
+  "prConcurrentLimit": 0,
+  "addLabels": ["renovate"],
+  "branchPrefix": "renovate/",
+  "timezone": "Asia/Jerusalem",
+  "schedule": ["at any time"],
+  "separateMajorMinor": true,
+  "separateMinorPatch": false,
+  "automerge": true,
+  "major": {
+    "automerge": false
+  },
+  "digest": {
+    "enabled": false
+  },
+  "constraints": {
+    "go": "~1.19"
+  },
+  "stabilityDays": 14,
+  "prCreation": "not-pending",
+  "postUpdateOptions": ["gomodTidy"],
+  "packageRules": [
+  ],
+  "vulnerabilityAlerts": {
+    "addLabels": ["security"],
+    "assignees": ["@omercnet", "@dorsha"]
+  }
+}
