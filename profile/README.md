@@ -1,45 +1,45 @@
-## Hi there 👋
+![github-header-image (2) (1)](https://github.com/descope/.github/assets/32936811/d904d37e-e3fa-4331-9f10-2880bb708f64)
 
-<!--
+Welcome to the Official Github repository for Descope. We provide an easy-to-use and secure service to seamlessly handle user management and authentication across various applications. Our integration approaches range from utilizing Descope Flows to create your own authentication with a no-code drag-and-drop workflow, to integrating directly with your application server.
 
-**Here are some ideas to get you started:**
+![GitHub followers](https://img.shields.io/github/followers/descope?label=Follow&style=social) [![Website](https://img.shields.io/badge/Website-descope.com-blue?style=flat)](https://descope.com)
 
-🙋‍♀️ A short introduction - what is your organization all about?
-🌈 Contribution guidelines - how can the community get involved?
-👩‍💻 Useful resources - where can the community find your docs? Is there anything else the community should know?
-🍿 Fun facts - what does your team eat for breakfast?
-🧙 Remember, you can do mighty things with the power of [Markdown](https://docs.github.com/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)
--->
+## 🚀 SDKs Supported
 
-# Descope ![GitHub release](https://img.shields.io/github/release/descope/descope) ![GitHub last commit](https://img.shields.io/github/last-commit/descope/descope) ![GitHub issues](https://img.shields.io/github/issues-raw/descope/descope) ![GitHub pull requests](https://img.shields.io/github/issues-pr/descope/descope) 
+Descope offers both client and backend SDKs for many languages and frameworks. 
 
-Descope is a forward-thinking company that builds innovative and user-friendly SDKs and Sample Apps. We are focused on providing seamless experiences for both developers and end-users.
+## 🖥️ Client SDKs
 
-Our products are crafted with a deep understanding of the challenges developers face, and they are designed to enable you to build amazing applications with less effort.
+Descope Client SDKs are used to create and manage authentication flows and session management. They are especially useful when integrating Descope into your client application.
 
-## SDKs
+- **React SDK**: [![Github Link](https://img.shields.io/badge/Link-Github-blue)](https://github.com/descope/react-sdk)
+- **Web Component (HTML) SDK**: [![Github Link](https://img.shields.io/badge/Link-Github-blue)](https://github.com/descope/descope-js/tree/main/packages/web-component)
+- **Vue SDK**: [![Github Link](https://img.shields.io/badge/Link-Github-blue)](https://github.com/descope/vue-sdk)
+- **Swift SDK**: [![Github Link](https://img.shields.io/badge/Link-Github-blue)](https://github.com/descope/swift-sdk)
+- **Flutter SDK**: [![Github Link](https://img.shields.io/badge/Link-Github-blue)](https://github.com/descope/flutter-sdk)
+- **Kotlin SDK**: [![Github Link](https://img.shields.io/badge/Link-Github-blue)](https://github.com/descope/kotlin-sdk)
 
-* **React SDK** - Our SDK
-* **Node SDK** - A brief description about SDK 2
-* **SDK 3** - A brief description about SDK 3
+## ⚙️ Backend SDKs
 
-## Sample Apps
+Descope Backend SDKs are typically used for JWT validation after user authentication with Descope. They are also used for RBAC-related authorization checks, when protecting various APIs. These are essential when integrating with your backend application server.
 
-To look at all of the sample apps we offer, check out our Sample Apps [here](https://github.com/descope-sample-apps).
+- **Python SDK**: [![Github Link](https://img.shields.io/badge/Link-Github-blue)](http://github.com/descope/python-sdk)
+- **Go SDK**: [![Github Link](https://img.shields.io/badge/Link-Github-blue)](https://github.com/descope/go-sdk)
+- **Node SDK**: [![Github Link](https://img.shields.io/badge/Link-Github-blue)](http://github.com/descope/node-sdk)
+- **PHP SDK**: [![Github Link](https://img.shields.io/badge/Link-Github-blue)](http://github.com/descope/php-sdk)
 
-## Introduction
+## 🍿 Descope Sample Apps
 
-Here at Descope, we’re proud to be a part of the vibrant and diverse developer community.
-We are always exploring the latest technologies and trends to ensure our SDKs and Sample Apps offer the best possible experience. We love hearing from our users, so please don't hesitate to get in touch with your thoughts and suggestions.
+For those looking for working examples and best practices, check out our [Descope Sample Apps](https://github.com/descope-sample-apps) repository.
 
-## Getting Started
+## ❓ Need Help?
 
-To start using Descope, simply visit our [docs page](), or follow the instructions in the README files of each SDK or Sample App.
+📚 Please visit the official [Descope Documentation](https://docs.descope.com) for detailed guides and tutorials on using our SDKs and services.
 
-## Feedback
+🔔 Stay tuned for more updates and enhancements in our [CHANGELOG](https://github.com/orgs/descope/discussions/60) as we continue to expand our services and SDK offerings.
 
-If you have any feedback or issues, please file a GitHub issue on this repository.
+🗨️ Join our AuthTown Community, where thousands of Descopers can ask questions, provide knowledge and feedback, and share cool projects they're working on.
 
-## License
+## 💬 Feedback
 
-This project is licensed under the [MIT License](LICENSE).
+If you have any feedback or issues, please file a GitHub issue on any one of our repositories.
