@@ -1,6 +1,6 @@
 ![github-header-image (2) (1)](https://github.com/descope/.github/assets/32936811/d904d37e-e3fa-4331-9f10-2880bb708f64)
 
-Welcome to the Official Github repository for Descope. We provide an easy-to-use and secure service to seamlessly handle user management and authentication across various applications. Our integration approaches range from utilizing Descope Flows to create your own authentication with a no-code drag-and-drop workflow, to integrating directly with your application server.
+Welcome to the Official GitHub repository for Descope. We provide an easy-to-use and secure service to seamlessly handle user management and authentication across various applications. Our integration approaches range from utilizing Descope Flows to create your own authentication with a no-code drag-and-drop workflow, to integrating directly with your application server.
 
 ![GitHub followers](https://img.shields.io/github/followers/descope?label=Follow&style=social) [![Website](https://img.shields.io/badge/Website-descope.com-blue?style=flat)](https://descope.com)
 
