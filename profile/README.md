@@ -59,9 +59,11 @@ For those looking for working examples and best practices of our various SDKs an
 
 📚 Please visit the official [Descope Documentation](https://docs.descope.com) for detailed guides and tutorials on using our SDKs and services.
 
-🔔 Stay tuned for more updates and enhancements in our [CHANGELOG](https://github.com/orgs/descope/discussions/60) as we continue to expand our services and SDK offerings.
+🔔 Stay tuned for more updates and enhancements in our [CHANGELOG](https://github.com/orgs/descope/discussions/categories/changelog) as we continue to expand our services and SDK offerings.
 
-🗨️ Join our AuthTown Community, where thousands of Descopers can ask questions, provide knowledge and feedback, and share cool projects they're working on.
+🗨️ Join our [AuthTown Community](https://www.descope.com/community), where thousands of Descopers can ask questions, provide knowledge and feedback, and share cool projects they're working on.
+
+🎓 Visit our [Learning Center](https://www.descope.com/learn) to learn more about Authentication concepts, and how different aspects of Descope work under the hood.
 
 ## 💬 Feedback
 
