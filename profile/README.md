@@ -4,6 +4,8 @@ Welcome to the Official GitHub repository for Descope. We provide an easy-to-use
 
 ![GitHub followers](https://img.shields.io/github/followers/descope?label=Follow&style=social) [![Website](https://img.shields.io/badge/Website-descope.com-blue?style=flat)](https://descope.com)
 
+You can either use Descope with our wide variety of SDKs or use Descope as an [OpenID Connect](https://www.descope.com/learn/post/oidc) provider with another IdP.
+
 ## 🚀 SDKs Supported
 
 Descope offers both client and backend SDKs for many languages and frameworks. 
@@ -27,6 +29,24 @@ Descope Backend SDKs are typically used for JWT validation after user authentica
 - **[Go SDK](https://github.com/descope/go-sdk)**
 - **[Node SDK](http://github.com/descope/node-sdk)**
 - **[PHP SDK](http://github.com/descope/php-sdk)**
+
+## 🔗 Descope and OpenID Connect
+
+If you're using Descope as a Federated IdP (Identity Provider), you can refer to either the [main documentation](https://docs.descope.com/customize/auth/oidc/) on how to set it up, or you can review a few of the tutorials published that showcase how to use Descope with many major existing identity providers:
+
+### Descope with: 
+
+- **[Auth0](https://docs.descope.com/knowledgebase/sso/auth0oidc/)**
+- **[Cognito](https://docs.descope.com/knowledgebase/sso/cognitooidc/)**
+- **[Firebase](https://www.descope.com/blog/post/passkeys-firebase-oidc)**
+
+## 📝 Blogs
+
+Our blogs are very informative, and showcase new features as well as important and interesting use cases for our product. You can read these on the [Blog section](https://www.descope.com/blog) of our main website. 
+
+## 🧠 Knowledge Base Articles
+
+For Knowledge Base articles on how to perform certain tasks or troubleshoot, please refer to the [KB section](https://docs.descope.com/knowledgebase/general/selfregistration/) of our Docs page.
 
 ## 🍿 Descope Sample Apps
 
