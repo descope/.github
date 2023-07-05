@@ -12,25 +12,28 @@ Descope offers both client and backend SDKs for many languages and frameworks.
 
 Descope Client SDKs are used to create and manage authentication flows and session management. They are especially useful when integrating Descope into your client application.
 
-- **React SDK**: [![Github Link](https://img.shields.io/badge/Link-Github-blue)](https://github.com/descope/react-sdk)
-- **Web Component (HTML) SDK**: [![Github Link](https://img.shields.io/badge/Link-Github-blue)](https://github.com/descope/descope-js/tree/main/packages/web-component)
-- **Vue SDK**: [![Github Link](https://img.shields.io/badge/Link-Github-blue)](https://github.com/descope/vue-sdk)
-- **Swift SDK**: [![Github Link](https://img.shields.io/badge/Link-Github-blue)](https://github.com/descope/swift-sdk)
-- **Flutter SDK**: [![Github Link](https://img.shields.io/badge/Link-Github-blue)](https://github.com/descope/flutter-sdk)
-- **Kotlin SDK**: [![Github Link](https://img.shields.io/badge/Link-Github-blue)](https://github.com/descope/kotlin-sdk)
+- **[React SDK](https://github.com/descope/react-sdk)**
+- **[Web Component (HTML) SDK](https://github.com/descope/descope-js/tree/main/packages/web-component)**
+- **[Vue SDK](https://github.com/descope/vue-sdk)**
+- **[Swift SDK](https://github.com/descope/swift-sdk)**
+- **[Flutter SDK](https://github.com/descope/flutter-sdk)**
+- **[Kotlin SDK](https://github.com/descope/descope-kotlin)**
 
 ## ⚙️ Backend SDKs
 
 Descope Backend SDKs are typically used for JWT validation after user authentication with Descope. They are also used for RBAC-related authorization checks, when protecting various APIs. These are essential when integrating with your backend application server.
 
-- **Python SDK**: [![Github Link](https://img.shields.io/badge/Link-Github-blue)](http://github.com/descope/python-sdk)
-- **Go SDK**: [![Github Link](https://img.shields.io/badge/Link-Github-blue)](https://github.com/descope/go-sdk)
-- **Node SDK**: [![Github Link](https://img.shields.io/badge/Link-Github-blue)](http://github.com/descope/node-sdk)
-- **PHP SDK**: [![Github Link](https://img.shields.io/badge/Link-Github-blue)](http://github.com/descope/php-sdk)
+- **[Python SDK](http://github.com/descope/python-sdk)**
+- **[Go SDK](https://github.com/descope/go-sdk)**
+- **[Node SDK](http://github.com/descope/node-sdk)**
+- **[PHP SDK](http://github.com/descope/php-sdk)**
 
 ## 🍿 Descope Sample Apps
 
-For those looking for working examples and best practices, check out our [Descope Sample Apps](https://github.com/descope-sample-apps) repository.
+- **[B2B Sample App](https://github.com/descope-sample-apps/b2b-react-sample-app)**, see a preview of it [here](https://b2b-react-sample-app.preview.descope.org/)
+- **[B2C Sample App](https://github.com/descope-sample-apps/b2c-react-sample-app)**, see a preview of it [here](https://www.tee-hee-tees.store/)
+
+For those looking for working examples and best practices of our various SDKs and blogs, check out our [Descope Sample Apps](https://github.com/descope-sample-apps) repository.
 
 ## ❓ Need Help?
 
