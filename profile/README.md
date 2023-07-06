@@ -44,9 +44,9 @@ If you're using Descope as a Federated IdP (Identity Provider), you can refer to
 
 Our blogs are very informative, and showcase new features as well as important and interesting use cases for our product. You can read these on the [Blog section](https://www.descope.com/blog) of our main website. 
 
-## 🧠 Knowledge Base Articles
+## 📚 Descope Docs
 
-For Knowledge Base articles on how to perform certain tasks or troubleshoot, please refer to the [KB section](https://docs.descope.com/knowledgebase/general/selfregistration/) of our Docs page.
+Please visit the official [Descope Documentation](https://docs.descope.com) for detailed guides and tutorials on using our SDKs and services.
 
 ## 🍿 Descope Sample Apps
 
@@ -57,7 +57,7 @@ For those looking for working examples and best practices of our various SDKs an
 
 ## ❓ Need Help?
 
-📚 Please visit the official [Descope Documentation](https://docs.descope.com) for detailed guides and tutorials on using our SDKs and services.
+🧠 For Knowledge Base articles on how to perform certain tasks or troubleshoot, please refer to the [KB section](https://docs.descope.com/knowledgebase/general/selfregistration/) of our Docs page.
 
 🔔 Stay tuned for more updates and enhancements in our [CHANGELOG](https://github.com/orgs/descope/discussions/categories/changelog) as we continue to expand our services and SDK offerings.
 
