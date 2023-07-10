@@ -2,7 +2,7 @@
 
 Welcome to the Official GitHub repository for Descope. We provide an easy-to-use and secure service to seamlessly handle user management and authentication across various applications. Our integration approaches range from utilizing Descope Flows to create your own authentication with a no-code drag-and-drop workflow, to integrating directly with your application server.
 
-![GitHub followers](https://img.shields.io/github/followers/descope?label=Follow&style=social) [![Website](https://img.shields.io/badge/Website-descope.com-blue?style=flat)](https://descope.com)
+[![GitHub followers](https://img.shields.io/github/followers/descope?label=Followers&style=social)](https://github.com/descope) [![Website](https://img.shields.io/badge/Website-descope.com-blue?style=flat)](https://descope.com)
 
 You can either use Descope with our wide variety of SDKs or use Descope as an [OpenID Connect](https://www.descope.com/learn/post/oidc) provider with another IdP.
 
