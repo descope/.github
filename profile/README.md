@@ -40,6 +40,12 @@ If you're using Descope as a Federated IdP (Identity Provider), you can refer to
 - **[Cognito](https://docs.descope.com/knowledgebase/sso/cognitooidc/)**
 - **[Firebase](https://www.descope.com/blog/post/passkeys-firebase-oidc)**
 
+## 🧩 Additional Frameworks
+
+Descope also has guides and templates you can use, to see how Descope integrates with other frameworks and services listed below:
+
+- **[Webflow Guide](https://docs.descope.com/knowledgebase/frameworks/descopewebflow/) - ([Template](https://webflow.com/made-in-webflow/website/terminal-descope))** 
+
 ## 📝 Blogs
 
 Our blogs are very informative, and showcase new features as well as important and interesting use cases for our product. You can read these on the [Blog section](https://www.descope.com/blog) of our main website. 
