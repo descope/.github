@@ -44,7 +44,8 @@ If you're using Descope as a Federated IdP (Identity Provider), you can refer to
 
 Descope also has guides and templates you can use, to see how Descope integrates with other frameworks and services listed below:
 
-- **[Webflow Guide](https://docs.descope.com/knowledgebase/frameworks/descopewebflow/) - ([Template](https://webflow.com/made-in-webflow/website/terminal-descope))** 
+- **[Webflow Guide](https://docs.descope.com/knowledgebase/frameworks/descopewebflow/)** - ([Template](https://webflow.com/made-in-webflow/website/terminal-descope))
+- **[Passport.js Strategy](https://github.com/descope/passport-descope)** - ([Sample App](https://github.com/descope-sample-apps/passportjs_sample))
 
 ## 📝 Blogs
 
