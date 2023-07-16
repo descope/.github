@@ -35,8 +35,8 @@ runs:
       shell: bash
       if: steps.setup-python.outputs.cache-hit != 'true'
       run: |
-        pip install pytest
         poetry install
+        python -m pip install pytest
 
     - name: Validate poetry lock
       shell: bash
