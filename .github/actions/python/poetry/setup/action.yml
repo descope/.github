@@ -29,8 +29,8 @@ runs:
       shell: bash
       if: steps.setup-python.outputs.cache-hit != 'true'
       run: |
+        poetry add --dev pytest@latest
         poetry install
-        poetry add pytest
 
     - name: Validate poetry lock
       shell: bash
