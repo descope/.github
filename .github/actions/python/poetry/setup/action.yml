@@ -27,7 +27,6 @@ runs:
     - name: Install dependencies
       shell: bash
       run: |
-        poetry add pytest --dev
         poetry install
 
     - name: Validate poetry lock
