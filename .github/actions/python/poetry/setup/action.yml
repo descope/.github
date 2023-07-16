@@ -25,18 +25,12 @@ runs:
         python-version: ${{ inputs.python-version }}
         cache: 'poetry'   
 
-    - name: Install PIP
-      shell: bash
-      run: |
-        wget https://bootstrap.pypa.io/get-pip.py
-        python get-pip.py
-
     - name: Install dependencies
       shell: bash
       if: steps.setup-python.outputs.cache-hit != 'true'
       run: |
         poetry install
-        python -m pip install pytest
+        poetry add pytest
 
     - name: Validate poetry lock
       shell: bash
