@@ -23,33 +23,27 @@ runs:
       id: setup-python
       with:
         python-version: ${{ inputs.python-version }}
-        cache: 'poetry'   
 
     - name: Install dependencies
       shell: bash
-      if: steps.setup-python.outputs.cache-hit != 'true'
       run: |
-        poetry add --dev pytest@latest
+        poetry add pytest --dev
         poetry install
 
     - name: Validate poetry lock
       shell: bash
-      if: steps.setup-python.outputs.cache-hit == 'true'
       run: |
         poetry env use ${{ inputs.python-version }}
         poetry lock
 
     - name: Black
-      if: ${{ steps.filter.outputs.py_modified == 'true' }}
       shell: bash
       run: poetry run black --check ${{ steps.filter.outputs.py_modified_files }}
 
     - name: flake8
-      if: ${{ steps.filter.outputs.py_modified == 'true' }}
       shell: bash
       run: poetry run flake8 ${{ steps.filter.outputs.py_modified_files }}
 
     - name: isort
-      if: ${{ steps.filter.outputs.py_modified == 'true' }}
       shell: bash
       run: poetry run isort --check --diff --profile black ${{ steps.filter.outputs.py_modified_files }}
