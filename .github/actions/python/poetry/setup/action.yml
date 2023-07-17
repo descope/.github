@@ -23,17 +23,14 @@ runs:
       id: setup-python
       with:
         python-version: ${{ inputs.python-version }}
-        cache: 'poetry'   
 
     - name: Install dependencies
       shell: bash
-      if: steps.setup-python.outputs.cache-hit != 'true'
       run: |
         poetry install
 
     - name: Validate poetry lock
       shell: bash
-      if: steps.setup-python.outputs.cache-hit == 'true'
       run: |
         poetry env use ${{ inputs.python-version }}
         poetry lock
