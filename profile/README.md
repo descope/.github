@@ -29,6 +29,7 @@ Descope Backend SDKs are typically used for JWT validation after user authentica
 - **[Go SDK](https://github.com/descope/go-sdk)**
 - **[Node SDK](http://github.com/descope/node-sdk)**
 - **[PHP SDK](http://github.com/descope/php-sdk)**
+- **[Java SDK](https://github.com/descope/descope-java)**
 
 ## 🔗 Descope and OpenID Connect
 
