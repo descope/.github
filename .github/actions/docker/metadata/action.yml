@@ -1,0 +1,49 @@
+name: Docker Metadata
+description: "Extracts docker metadata"
+inputs:
+  images:
+    description: "List of Docker images to use as base name for tags"
+    required: true
+outputs:
+  version:
+    description: "Generated Docker image version"
+    value: ${{ steps.meta.outputs.version }}
+  tags:
+    description: "Generated Docker tags"
+    value: ${{ steps.meta.outputs.tags }}
+  labels:
+    description: "Generated Docker labels"
+    value: ${{ steps.meta.outputs.labels }}
+  json:
+    description: "JSON output of tags and labels"
+    value: ${{ steps.meta.outputs.json }}
+  description:
+    description: Image description aka commit message
+    value: ${{ steps.commit-message.outputs.message }}
+runs:
+  using: "composite"
+  steps:
+    - name: Fetch commit message
+      shell: bash
+      id: commit-message
+      run: echo message="$(git log -1 HEAD --pretty=format:%s)" >> $GITHUB_OUTPUT
+    - name: Extract metadata for the Docker image
+      id: meta
+      uses: docker/metadata-action@v4.4.0
+      with:
+        images: |
+          ${{ inputs.images }}
+        tags: |
+          type=ref,event=branch
+          type=raw,value=ci-${{github.run_number}},event=branch
+          type=raw,value={{branch}}-{{date 'YYYY.M.D'}}-${{github.run_number}},event=branch
+          type=raw,value={{branch}}-{{date 'YYYY.M.D'}}-sha-{{sha}},event=branch
+          type=raw,value={{branch}}-{{sha}}
+          type=raw,value={{branch}}-${{github.run_number}}
+          type=raw,value=sha-{{sha}}
+          type=raw,value=latest,enable={{is_default_branch}}
+        labels: |
+          org.opencontainers.image.description=${{steps.commit-message.outputs.message}}
+          github.sha=${{github.sha}}
+          github.repository=${{github.repository}}
+          github.actor=${{github.actor}}
