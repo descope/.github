@@ -28,23 +28,10 @@ runs:
   steps:
     - name: Extract metadata (tags, labels) for Docker
       id: meta
-      uses: docker/metadata-action@v4
+      uses: ./.github/actions/docker/metadata
       with:
-        images: ${{ inputs.image-name }}
-        tags: |
-          type=ref,event=branch
-          type=raw,value=ci-${{github.run_number}},event=branch
-          type=raw,value={{branch}}-{{date 'YYYY.M.D'}}-${{github.run_number}},event=branch         
-          type=raw,value={{branch}}-{{date 'YYYY.M.D'}}-{{sha}},event=branch         
-          type=raw,value={{branch}}-{{sha}}
-          type=raw,value={{branch}}-${{github.run_number}}           
-          type=raw,value=sha-{{sha}}
-          type=raw,value=latest,enable={{is_default_branch}}
-
-    - name: Fetch commit message
-      shell: bash
-      id: commit-message
-      run: echo message="$(git log -1 HEAD --pretty=format:%s)" >> $GITHUB_OUTPUT
+        images: |
+          ${{inputs.image-name}}
 
     - name: Build and push Docker image
       uses: docker/build-push-action@v4
@@ -55,4 +42,6 @@ runs:
         tags: ${{ steps.meta.outputs.tags }}
         labels: |
           ${{ steps.meta.outputs.labels }}
-          org.opencontainers.image.description=${{steps.commit-message.outputs.message}}
+          org.opencontainers.image.description=${{ steps.meta.outputs.description }}
+        outputs: type=image,name=target,annotation-index.org.opencontainers.image.description=${{ steps.meta.outputs.description }},annotation-index.github.sha=${{ github.sha }}
+
