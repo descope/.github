@@ -14,22 +14,36 @@ Descope offers both client and backend SDKs for many languages and frameworks.
 
 Descope Client SDKs are used to create and manage authentication flows and session management. They are especially useful when integrating Descope into your client application.
 
-- **[React SDK](https://github.com/descope/react-sdk)**
-- **[Web Component (HTML) SDK](https://github.com/descope/descope-js/tree/main/packages/web-component)**
-- **[Vue SDK](https://github.com/descope/vue-sdk)**
-- **[Swift SDK](https://github.com/descope/swift-sdk)**
-- **[Flutter SDK](https://github.com/descope/flutter-sdk)**
-- **[Kotlin SDK](https://github.com/descope/descope-kotlin)**
+- **[React](https://github.com/descope/react-sdk)**
+- **[NextJS](https://docs.descope.com/build/guides/gettingstarted/)**
+- **[Web Component (HTML)](https://github.com/descope/descope-js/tree/main/packages/web-component)**
+- **[Vue](https://github.com/descope/vue-sdk)**
+- **[Swift](https://github.com/descope/swift-sdk)**
+- **[Flutter](https://github.com/descope/flutter-sdk)**
+- **[Kotlin](https://github.com/descope/descope-kotlin)**
 
 ## ⚙️ Backend SDKs
 
 Descope Backend SDKs are typically used for JWT validation after user authentication with Descope. They are also used for RBAC-related authorization checks, when protecting various APIs. These are essential when integrating with your backend application server.
 
-- **[Python SDK](http://github.com/descope/python-sdk)**
-- **[Go SDK](https://github.com/descope/go-sdk)**
-- **[Node SDK](http://github.com/descope/node-sdk)**
-- **[PHP SDK](http://github.com/descope/php-sdk)**
-- **[Java SDK](https://github.com/descope/descope-java)**
+- **[Python](http://github.com/descope/python-sdk)**
+- **[Go](https://github.com/descope/go-sdk)**
+- **[Node](http://github.com/descope/node-sdk)**
+- **[PHP](http://github.com/descope/php-sdk)**
+- **[Java](https://github.com/descope/descope-java)**
+
+## 🧩 Additional Frameworks / Integrations
+
+Descope also has guides and templates you can use, to see how Descope integrates with other frameworks and services listed below:
+
+### Frameworks
+- **[Passport.js Strategy](https://github.com/descope/passport-descope)** - ([Sample App](https://github.com/descope-sample-apps/passportjs_sample))
+- **Angular** - ([Sample App](https://github.com/descope-sample-apps/angular-webjs-sample-app))
+
+### Integrations
+- **[Okta](https://www.okta.com/integrations/descope/)**
+- **[Webflow](https://docs.descope.com/knowledgebase/frameworks/descopewebflow/)** - ([Template](https://webflow.com/made-in-webflow/website/terminal-descope))
+- **[Retool](https://docs.descope.com/knowledgebase/sso/retool/oidc/)**
 
 ## 🔗 Descope and OpenID Connect
 
@@ -40,18 +54,6 @@ If you're using Descope as a Federated IdP (Identity Provider), you can refer to
 - **[Auth0](https://docs.descope.com/knowledgebase/sso/auth0oidc/)**
 - **[Cognito](https://docs.descope.com/knowledgebase/sso/cognitooidc/)**
 - **[Firebase](https://www.descope.com/blog/post/passkeys-firebase-oidc)**
-
-## 🧩 Additional Frameworks / Services
-
-Descope also has guides and templates you can use, to see how Descope integrates with other frameworks and services listed below:
-
-### Frameworks
-- **[Passport.js Strategy](https://github.com/descope/passport-descope)** - ([Sample App](https://github.com/descope-sample-apps/passportjs_sample))
-- **Angular** - ([Sample App](https://github.com/descope-sample-apps/angular-webjs-sample-app))
-
-### Services
-- **[Webflow](https://docs.descope.com/knowledgebase/frameworks/descopewebflow/)** - ([Template](https://webflow.com/made-in-webflow/website/terminal-descope))
-- **[Retool](https://docs.descope.com/knowledgebase/sso/retool/oidc/)**
 
 ## 📝 Blogs
 
