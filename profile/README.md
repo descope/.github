@@ -43,7 +43,7 @@ Descope also has guides and templates you can use, to see how Descope integrates
 ### Integrations
 - **[Okta](https://www.okta.com/integrations/descope/)**
 - **[Webflow](https://docs.descope.com/knowledgebase/frameworks/descopewebflow/)** - ([Template](https://webflow.com/made-in-webflow/website/terminal-descope))
-- **[Retool](https://docs.descope.com/knowledgebase/sso/retool/oidc/)** - ([Blog]())
+- **[Retool](https://docs.descope.com/knowledgebase/sso/retool/oidc/)**
 
 ## 🔗 Descope and OpenID Connect
 
