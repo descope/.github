@@ -29,7 +29,7 @@ runs:
       run: echo message="$(git log -1 HEAD --pretty=format:%s)" >> $GITHUB_OUTPUT
     - name: Extract metadata for the Docker image
       id: meta
-      uses: docker/metadata-action@v4.4.0
+      uses: docker/metadata-action@v4.6.0
       with:
         images: |
           ${{ inputs.images }}
