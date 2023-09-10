@@ -26,7 +26,7 @@ runs:
     - name: Fetch commit message
       shell: bash
       id: commit-message
-      run: echo message="$(git log -1 HEAD --pretty=format:%s)" >> $GITHUB_OUTPUT
+      run: echo message="$(git log -1 HEAD --pretty=format:%s | tr -cd '[:alnum:]._-')" >> $GITHUB_OUTPUT
     - name: Extract metadata for the Docker image
       id: meta
       uses: docker/metadata-action@v4.6.0
@@ -36,10 +36,10 @@ runs:
         tags: |
           type=ref,event=branch
           type=raw,value=ci-${{github.run_number}},event=branch
-          type=raw,value={{branch}}-{{date 'YYYY.M.D'}}-${{github.run_number}},event=branch
-          type=raw,value={{branch}}-{{date 'YYYY.M.D'}}-sha-{{sha}},event=branch
-          type=raw,value={{branch}}-{{sha}}
-          type=raw,value={{branch}}-${{github.run_number}}
+          type=raw,value=${{github.ref_name}}-{{date 'YYYY.M.D'}}-${{github.run_number}},event=branch
+          type=raw,value=${{github.ref_name}}-{{date 'YYYY.M.D'}}-sha-{{sha}},event=branch
+          type=raw,value=${{github.ref_name}}-{{sha}}
+          type=raw,value=${{github.ref_name}}-${{github.run_number}}
           type=raw,value=sha-{{sha}}
           type=raw,value=latest,enable={{is_default_branch}}
         labels: |
