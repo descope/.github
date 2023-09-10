@@ -24,7 +24,7 @@ runs:
 
     - name: Configure AWS credentials
       if: ${{ inputs.ecr_account }}
-      uses: aws-actions/configure-aws-credentials@v2
+      uses: aws-actions/configure-aws-credentials@v3
       with:
         aws-region: ${{ inputs.ecr_region }}
         role-to-assume: arn:aws:iam::${{ inputs.ecr_account }}:role/GitHubActionsECR
