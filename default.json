@@ -32,7 +32,7 @@
     "enabled": false
   },
   "constraints": {
-    "go": "~1.21"
+    "go": "~1.20"
   },
   "configMigration": true,
   "osvVulnerabilityAlerts": true,
