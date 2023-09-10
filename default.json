@@ -25,9 +25,6 @@
   "branchPrefix": "renovate/",
   "timezone": "Asia/Jerusalem",
   "schedule": ["at any time"],
-  "separateMajorMinor": true,
-  "separateMinorPatch": false,
-  "automerge": true,
   "major": {
     "automerge": false
   },
@@ -35,15 +32,32 @@
     "enabled": false
   },
   "constraints": {
-    "go": "~1.19"
+    "go": "~1.21"
   },
-  "stabilityDays": 14,
+  "configMigration": true,
+  "osvVulnerabilityAlerts": true,
+  "dependencyDashboardOSVVulnerabilitySummary": "unresolved",
+  "minimumReleaseAge": "21 days",
   "prCreation": "not-pending",
   "postUpdateOptions": ["gomodTidy"],
   "packageRules": [
+    {
+      "matchDepTypes": ["dependencies"],
+      "matchUpdateTypes": ["major"],
+      "automerge": false
+    },
+    {
+      "groupName": "devDependencies",
+      "groupSlug": "dev-dependencies",
+      "matchDepTypes": ["devDependencies"],
+      "matchUpdateTypes": ["major", "minor", "patch", "pin", "digest"],
+      "automerge": true,
+      "schedule": ["after 10pm and before 5am every weekday", "every weekend"]
+    }
   ],
   "vulnerabilityAlerts": {
     "addLabels": ["security"],
-    "assignees": ["@omercnet", "@dorsha"]
+    "assignees": ["@omercnet", "@dorsha"],
+    "automerge": true
   }
 }
