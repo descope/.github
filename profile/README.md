@@ -21,6 +21,7 @@ Descope Client SDKs are used to create and manage authentication flows and sessi
 - **[Swift](https://github.com/descope/swift-sdk)**
 - **[Flutter](https://github.com/descope/flutter-sdk)**
 - **[Kotlin](https://github.com/descope/descope-kotlin)**
+- **[React Native](https://github.com/descope/descope-react-native)**
 
 ## ⚙️ Backend SDKs
 
