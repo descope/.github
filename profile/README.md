@@ -32,7 +32,7 @@ Descope Backend SDKs are typically used for JWT validation after user authentica
 - **[PHP](http://github.com/descope/php-sdk)**
 - **[Java](https://github.com/descope/descope-java)**
 
-- ## 📱 Mobile SDKs
+## 📱 Mobile SDKs
 
 Descope Backend SDKs are typically used for JWT validation after user authentication with Descope. They are also used for RBAC-related authorization checks, when protecting various APIs. These are essential when integrating with your backend application server.
 
