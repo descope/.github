@@ -32,6 +32,15 @@ Descope Backend SDKs are typically used for JWT validation after user authentica
 - **[PHP](http://github.com/descope/php-sdk)**
 - **[Java](https://github.com/descope/descope-java)**
 
+- ## 📱 Mobile SDKs
+
+Descope Backend SDKs are typically used for JWT validation after user authentication with Descope. They are also used for RBAC-related authorization checks, when protecting various APIs. These are essential when integrating with your backend application server.
+
+- **[Flutter](https://github.com/descope/descope-flutter)**
+- **[Swift](https://github.com/descope/swift-sdk)**
+- **[Kotlin](https://github.com/descope/descope-kotlin)**
+- **[React Native](https://github.com/descope/descope-react-native)**
+
 ## 🧩 Additional Frameworks / Integrations
 
 Descope also has guides and templates you can use, to see how Descope integrates with other frameworks and services listed below:
