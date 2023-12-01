@@ -22,6 +22,15 @@ Descope Client SDKs are used to create and manage authentication flows and sessi
 - **[Flutter](https://github.com/descope/flutter-sdk)**
 - **[Kotlin](https://github.com/descope/descope-kotlin)**
 
+## 📱 Mobile SDKs
+
+Descope Mobile SDKs are used to create and manage authentication flows and session management. They are especially useful when integrating Descope within a mobile application.
+
+- **[Flutter](https://github.com/descope/descope-flutter)**
+- **[Swift](https://github.com/descope/swift-sdk)**
+- **[Kotlin](https://github.com/descope/descope-kotlin)**
+- **[React Native](https://github.com/descope/descope-react-native)**
+
 ## ⚙️ Backend SDKs
 
 Descope Backend SDKs are typically used for JWT validation after user authentication with Descope. They are also used for RBAC-related authorization checks, when protecting various APIs. These are essential when integrating with your backend application server.
