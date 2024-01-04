@@ -16,6 +16,7 @@ Descope Client SDKs are used to create and manage authentication flows and sessi
 
 - **[React](https://github.com/descope/react-sdk)**
 - **[NextJS](https://docs.descope.com/build/guides/gettingstarted/)**
+- **[Angular](https://github.com/descope/angular-sdk)**
 - **[Web Component (HTML)](https://github.com/descope/descope-js/tree/main/packages/web-component)**
 - **[Vue](https://github.com/descope/vue-sdk)**
 - **[Swift](https://github.com/descope/swift-sdk)**
@@ -47,7 +48,6 @@ Descope also has guides and templates you can use, to see how Descope integrates
 
 ### Frameworks
 - **[Passport.js Strategy](https://github.com/descope/passport-descope)** - ([Sample App](https://github.com/descope-sample-apps/passportjs_sample))
-- **Angular** - ([Sample App](https://github.com/descope-sample-apps/angular-webjs-sample-app))
 
 ### Integrations
 - **[Okta](https://docs.descope.com/knowledgebase/sso/ssowithokta/)**
