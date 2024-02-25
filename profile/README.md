@@ -72,6 +72,10 @@ Our blogs are very informative, and showcase new features as well as important a
 
 Please visit the official [Descope Documentation](https://docs.descope.com) for detailed guides and tutorials on using our SDKs and services.
 
+## 🖥️ Descope CLI
+
+You can install `descopecli` on your local machine to perform common tasks on your Descope project. See the [Descope CLI](https://github.com/descope/descopecli) repository for more details.
+
 ## 🍿 Descope Sample Apps
 
 - **[B2B Sample App](https://github.com/descope-sample-apps/b2b-react-sample-app)**, see a preview of it [here](https://b2b-react-sample-app.preview.descope.org/)
