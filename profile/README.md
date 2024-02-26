@@ -17,8 +17,8 @@ Descope Client SDKs are used to create and manage authentication flows and sessi
 - **[React](https://github.com/descope/react-sdk)**
 - **[NextJS](https://github.com/descope/descope-next-js)**
 - **[Angular](https://github.com/descope/angular-sdk)**
-- **[Web Component (HTML)](https://github.com/descope/descope-js/tree/main/packages/web-component)**
 - **[Vue](https://github.com/descope/vue-sdk)**
+- **[Web Component (HTML)](https://github.com/descope/descope-js/tree/main/packages/web-component)**
 
 ## 📱 Mobile SDKs
 
@@ -44,6 +44,7 @@ Descope Backend SDKs are typically used for JWT validation after user authentica
 Descope also has guides and templates you can use, to see how Descope integrates with other frameworks and services listed below:
 
 ### Frameworks
+- **[Django](https://github.com/descope/django-descope)** - ([Sample App](https://github.com/descope-sample-apps/django-sample-app))
 - **[Passport.js Strategy](https://github.com/descope/passport-descope)** - ([Sample App](https://github.com/descope-sample-apps/passportjs_sample))
 
 ### Integrations
