@@ -38,6 +38,8 @@ Descope Backend SDKs are typically used for JWT validation after user authentica
 - **[Node](http://github.com/descope/node-sdk)**
 - **[PHP](http://github.com/descope/php-sdk)**
 - **[Java](https://github.com/descope/descope-java)**
+- **[.NET](https://github.com/descope/descope-dotnet)**
+- **[Ruby](https://github.com/descope/descope-ruby-sdk)**
 
 ## 🧩 Additional Frameworks / Integrations
 
