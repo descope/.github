@@ -33,7 +33,7 @@ runs:
     - name: Login to Amazon ECR Private
       if: ${{ inputs.ecr_account }}
       id: login-ecr
-      uses: aws-actions/amazon-ecr-login@v1
+      uses: aws-actions/amazon-ecr-login@v2
 
     - name: Log in to GHCR
       uses: docker/login-action@v3
