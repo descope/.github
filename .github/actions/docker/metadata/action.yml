@@ -32,7 +32,7 @@ runs:
       run: echo message="$(git log -1 HEAD --pretty=format:%s | tr -cd '[:alnum:]._-')" >> $GITHUB_OUTPUT
     - name: Extract metadata for the Docker image
       id: meta
-      uses: docker/metadata-action@v4.6.0
+      uses: docker/metadata-action@v5.5.1
       with:
         images: |
           ${{ inputs.images }}
