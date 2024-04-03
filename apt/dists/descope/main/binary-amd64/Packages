@@ -1,0 +1,16 @@
+Package: descope
+Priority: optional
+Section: 
+Installed-Size: 3143
+Maintainer: Descope <info@descope.com>
+Architecture: amd64
+Version: 0.8.2
+Filename: pool/main/d/descope/descope_0.8.2_amd64.deb
+Size: 3146098
+MD5sum: 7ad0684198509cca6d7c2b685904a5ab
+SHA1: b758f4288b33e301793f615054a8e1fff07cd5e0
+SHA256: 0e7aaa8fdde8339b19f4007330923941f2c06ab9212f1f91d19e091dc4376677
+SHA512: f8a2bd1c8a5b4608391383acf326869f27ec936782db617d07823fdbc604dd67cdadb0ab5827d0fe97729ceb1220ba1d82264a60ffac40479a933beb7b8740b2
+Description: A command line utility for working with the Descope management APIs
+Homepage: https://www.descope.com/
+
