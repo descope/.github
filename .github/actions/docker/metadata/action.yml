@@ -15,7 +15,7 @@ outputs:
     description: "Generated Docker labels"
     value: ${{ steps.meta.outputs.labels }}
   annotations:
-    description: "Generated Docker labels"
+    description: "Generated Docker annotations"
     value: ${{ steps.meta.outputs.annotations }}
   json:
     description: "JSON output of tags and labels"
@@ -32,7 +32,9 @@ runs:
       run: echo message="$(git log -1 HEAD --pretty=format:%s | tr -cd '[:alnum:]._-')" >> $GITHUB_OUTPUT
     - name: Extract metadata for the Docker image
       id: meta
-      uses: docker/metadata-action@v4.6.0
+      uses: docker/metadata-action@v5.5.1
+      env:
+        DOCKER_METADATA_ANNOTATIONS_LEVELS: "manifest,index"
       with:
         images: |
           ${{ inputs.images }}
@@ -50,3 +52,6 @@ runs:
           github.sha=${{github.sha}}
           github.repository=${{github.repository}}
           github.actor=${{github.actor}}
+        annotations: |
+          github.sha=${{github.sha}}
+          github.repository=${{github.repository}}
