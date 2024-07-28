@@ -15,7 +15,7 @@ Descope offers both client and backend SDKs for many languages and frameworks.
 Descope Client SDKs are used to create and manage authentication flows, management widgets, and session management. They are especially useful when integrating Descope into your client application.
 
 - **[React](https://github.com/descope/descope-js/tree/main/packages/sdks/react-sdk)**
-- **[NextJS](https://github.com/descope/descope-next-js)**
+- **[NextJS](https://github.com/descope/descope-js/tree/main/packages/sdks/nextjs-sdk)**
 - **[Angular](https://github.com/descope/angular-sdk)**
 - **[Vue](https://github.com/descope/descope-js/tree/main/packages/sdks/vue-sdk)**
 - **[Web Component (HTML)](https://github.com/descope/descope-js/tree/main/packages/sdks/web-component)**
