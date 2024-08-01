@@ -16,7 +16,7 @@ Descope Client SDKs are used to create and manage authentication flows, manageme
 
 - **[React](https://github.com/descope/descope-js/tree/main/packages/sdks/react-sdk)**
 - **[NextJS](https://github.com/descope/descope-js/tree/main/packages/sdks/nextjs-sdk)**
-- **[Angular](https://github.com/descope/angular-sdk)**
+- **[Angular](https://github.com/descope/descope-js/tree/main/packages/sdks/angular-sdk)**
 - **[Vue](https://github.com/descope/descope-js/tree/main/packages/sdks/vue-sdk)**
 - **[Web Component (HTML)](https://github.com/descope/descope-js/tree/main/packages/sdks/web-component)**
 
