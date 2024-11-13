@@ -50,9 +50,9 @@ Descope also has guides and templates you can use, to see how Descope integrates
 - **[Passport.js Strategy](https://github.com/descope/passport-descope)** - ([Sample App](https://github.com/descope-sample-apps/passportjs_sample))
 
 ### Integrations
-- **[Okta](https://docs.descope.com/knowledgebase/sso/ssowithokta/)**
-- **[Webflow](https://docs.descope.com/knowledgebase/frameworks/descopewebflow/)** - ([Template](https://webflow.com/made-in-webflow/website/terminal-descope))
-- **[Retool](https://docs.descope.com/knowledgebase/sso/retool/oidc/)**
+- **[Okta](https://docs.descope.com/sso-integrations/customs-providers-sso-tenants/setup-guides/okta)**
+- **[Webflow](https://docs.descope.com/web-development-platforms/setup-guides/webflow)** - ([Template](https://webflow.com/made-in-webflow/website/terminal-descope))
+- **[Retool](https://docs.descope.com/sso-integrations/applications/setup-guides/retool-oidc)**
 
 ## 🔗 Descope and OpenID Connect
 
@@ -60,9 +60,9 @@ If you're using Descope as a Federated IdP (Identity Provider), you can refer to
 
 ### Descope with: 
 
-- **[Auth0](https://docs.descope.com/knowledgebase/sso/auth0oidc/)**
-- **[Cognito](https://docs.descope.com/knowledgebase/sso/cognitooidc/)**
-- **[Firebase](https://www.descope.com/blog/post/passkeys-firebase-oidc)**
+- **[Auth0](https://docs.descope.com/sso-integrations/applications/setup-guides/auth0/auth0-oidc)**
+- **[Cognito](https://docs.descope.com/sso-integrations/applications/setup-guides/aws-cognito)**
+- **[Firebase](https://docs.descope.com/sso-integrations/applications/setup-guides/firebase-oidc)**
 
 ## 📝 Blogs
 
@@ -85,9 +85,9 @@ For those looking for working examples and best practices of our various SDKs an
 
 ## ❓ Need Help?
 
-🧠 For Knowledge Base articles on how to perform certain tasks or troubleshoot, please refer to the [KB section](https://docs.descope.com/knowledgebase/general/selfregistration/) of our Docs page.
+🧠 For articles on how to perform certain tasks or troubleshoot, please refer to our [Docs page](https://docs.descope.com).
 
-🔔 Stay tuned for more updates and enhancements in our [CHANGELOG](https://github.com/orgs/descope/discussions/categories/changelog) as we continue to expand our services and SDK offerings.
+🔔 Stay tuned for more updates and enhancements in our [CHANGELOG](https://docs.descope.com/changelog) as we continue to expand our services and SDK offerings.
 
 🗨️ Join our [AuthTown Community](https://www.descope.com/community), where thousands of Descopers can ask questions, provide knowledge and feedback, and share cool projects they're working on.
 
