@@ -15,13 +15,12 @@ runs:
           py_modified:  
             - added|modified: "./**/*.py"
 
-    - name: Install and configure Poetry # This step must run before setup-python due to bug in the action (see https://github.com/actions/setup-python/issues/369)
-      uses: snok/install-poetry@v1
-    
-    - name: Setup Python
-      uses: actions/setup-python@v5
+    - name: Install poetry
+      run: pipx install poetry
+    - uses: actions/setup-python@v5
       id: setup-python
       with:
+        cache: 'poetry'
         python-version: ${{ inputs.python-version }}
 
     - name: Install dependencies
