@@ -16,6 +16,7 @@ runs:
             - added|modified: "./**/*.py"
 
     - name: Install poetry
+      shell: bash
       run: pipx install poetry
     - uses: actions/setup-python@v5
       id: setup-python
