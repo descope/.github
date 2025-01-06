@@ -15,19 +15,22 @@ runs:
           py_modified:  
             - added|modified: "./**/*.py"
 
-    - name: Install poetry
-      shell: bash
-      run: curl -sSL https://install.python-poetry.org | python3 -
     - uses: actions/setup-python@v5
       id: setup-python
       with:
-        cache: 'poetry'
         python-version: ${{ inputs.python-version }}
-
+    - name: Install and configure Poetry
+      uses: snok/install-poetry@v1
+    - name: Load cached venv
+      id: cached-poetry-dependencies
+      uses: actions/cache@v4
+      with:
+        path: .venv
+        key: venv-${{ runner.os }}-${{ steps.setup-python.outputs.python-version }}-${{ hashFiles('**/poetry.lock') }}
     - name: Install dependencies
+      if: steps.cached-poetry-dependencies.outputs.cache-hit != 'true'
       shell: bash
-      run: |
-        poetry install
+      run: poetry install --no-interaction --no-root
 
     - name: Black
       if: ${{ steps.filter.outputs.py_modified == 'true' }}
