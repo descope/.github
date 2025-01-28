@@ -17,12 +17,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
-        uses: actions/checkout@v4
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4
       - name: Setup
         uses: ./.github/actions/setup
         with:
           node_version: ${{ env.NODE_VERSION }}
-      - uses: andresz1/size-limit-action@v1
+      - uses: andresz1/size-limit-action@e7493a72a44b113341c0cf6186ab49c17c4b65c1 # v1
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           build_script: ${{ inputs.build_script }}
