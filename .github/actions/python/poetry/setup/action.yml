@@ -3,6 +3,7 @@ description: Basic python setup with Poetry
 inputs:
   python-version:
     description: Python version to use. Reads from .python-version if unset.
+    required: true
 runs:
   using: composite
   steps:
