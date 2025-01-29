@@ -7,7 +7,7 @@ runs:
   using: composite
   steps:
     - name: Get changed files
-      uses: dorny/paths-filter@v3
+      uses: dorny/paths-filter@de90cc6fb38fc0963ad72b210f1f284cd68cea36 # v3
       id: filter
       with:
         list-files: shell
@@ -15,15 +15,15 @@ runs:
           py_modified:  
             - added|modified: "./**/*.py"
 
-    - uses: actions/setup-python@v5
+    - uses: actions/setup-python@42375524e23c412d93fb67b49958b491fce71c38 # v5
       id: setup-python
       with:
         python-version: ${{ inputs.python-version }}
     - name: Install and configure Poetry
-      uses: snok/install-poetry@v1
+      uses: snok/install-poetry@76e04a911780d5b312d89783f7b1cd627778900a # v1
     - name: Load cached venv
       id: cached-poetry-dependencies
-      uses: actions/cache@v4
+      uses: actions/cache@1bd1e32a3bdc45362d1e726936510720a7c30a57 # v4
       with:
         path: .venv
         key: venv-${{ runner.os }}-${{ steps.setup-python.outputs.python-version }}-${{ hashFiles('**/poetry.lock') }}
