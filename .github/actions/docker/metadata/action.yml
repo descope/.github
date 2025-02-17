@@ -39,6 +39,7 @@ runs:
         images: |
           ${{ inputs.images }}
         tags: |
+          type=raw,enable=${{ github.event_name == 'pull_request'}},priority=600,value=${{ github.head_ref }}
           type=ref,event=branch
           type=raw,value=ci-${{github.run_number}},event=branch
           type=raw,value=${{github.ref_name}}-{{date 'YYYY.M.D'}}-${{github.run_number}},event=branch
