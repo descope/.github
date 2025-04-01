@@ -50,7 +50,7 @@ Descope also has guides and templates you can use, to see how Descope integrates
 - **[Passport.js Strategy](https://github.com/descope/passport-descope)** - ([Sample App](https://github.com/descope-sample-apps/passportjs_sample))
 
 ### Integrations
-- **[Okta](https://docs.descope.com/sso-integrations/customs-providers-sso-tenants/setup-guides/okta)**
+- **[Okta](https://docs.descope.com/sso/sso-configuration/setup-guides/okta)**
 - **[Webflow](https://docs.descope.com/web-development-platforms/setup-guides/webflow)** - ([Template](https://webflow.com/made-in-webflow/website/terminal-descope))
 - **[Retool](https://docs.descope.com/sso-integrations/applications/setup-guides/retool-oidc)**
 
