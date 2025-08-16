@@ -1,10 +1,14 @@
 ![github-header-image (2) (1)](https://github.com/descope/.github/assets/32936811/d904d37e-e3fa-4331-9f10-2880bb708f64)
 
-Welcome to the Official GitHub repository for Descope. We provide an easy-to-use and secure service to seamlessly handle user management and authentication across various applications. Our integration approaches range from utilizing Descope Flows to create your own authentication with a no-code drag-and-drop workflow, to integrating directly with your application server.
+Welcome to the Official GitHub repository for Descope. We provide an easy-to-use and secure service to seamlessly handle user management and authentication across various applications.
 
-[![GitHub followers](https://img.shields.io/github/followers/descope?label=Followers&style=social)](https://github.com/descope) [![Website](https://img.shields.io/badge/Website-descope.com-blue?style=flat)](https://descope.com)
+Our integration approaches range from utilizing Descope Flows to create authentication with a no-code drag-and-drop workflow, to integrating directly with your application server.
 
 You can either use Descope with our wide variety of SDKs or use Descope as an [OpenID Connect](https://www.descope.com/learn/post/oidc) provider with another IdP.
+
+Beyond traditional auth, Descope also powers AI & MCP use cases, making it simple to add authentication and authorization for AI agents and services. Learn more in our [AI & MCP section](#-descope-ai--mcp-use-cases) or visit [descope.ai](https://descope.ai).
+
+[![GitHub followers](https://img.shields.io/github/followers/descope?label=Followers&style=social)](https://github.com/descope) [![Website](https://img.shields.io/badge/Website-descope.com-blue?style=flat)](https://descope.com)
 
 ## 🚀 SDKs Supported
 
@@ -63,6 +67,29 @@ If you're using Descope as a Federated IdP (Identity Provider), you can refer to
 - **[Auth0](https://docs.descope.com/sso-integrations/applications/setup-guides/auth0/auth0-oidc)**
 - **[Cognito](https://docs.descope.com/sso-integrations/applications/setup-guides/aws-cognito)**
 - **[Firebase](https://docs.descope.com/sso-integrations/applications/setup-guides/firebase-oidc)**
+
+## 🤖 Descope AI & MCP Use Cases
+
+Descope also powers **AI agent authentication and authorization** through our [AI site](https://descope.ai), where you’ll find an overview of how Descope helps secure AI use cases.
+
+We provide tools, SDKs, and examples to make it easy to integrate **Model Context Protocol (MCP)** with Descope, including authentication and session management for your AI agents and services.
+
+### 📦 MCP Examples
+
+You can explore our growing collection of [MCP server examples](https://github.com/descope/ai/tree/main/examples), including:
+
+* **FastMCP** – FastAPI-powered MCP server
+* **FastAPI MCP** – Build MCP services with FastAPI
+* **Vercel MCP Adapter** – Deploy MCP services easily to Vercel
+* **MCP Auth SDK** – Secure authentication for MCP services with Descope
+
+### 🛠️ MCP Auth SDK
+
+For projects building secure MCP services, check out the [Descope MCP Auth SDK](https://github.com/descope/mcp-express), which makes it easy to add authentication and authorization to your AI workflows.
+
+### ✨ Development with Cursor, Windsurf, and VS Code
+
+We also provide [Cursor rules](https://github.com/descope/ai/tree/main/rules) so you can easily build with Descope SDKs in **Cursor**, **Windsurf**, and **VS Code**, streamlining the development experience for AI integrations.
 
 ## 📝 Blogs
 
