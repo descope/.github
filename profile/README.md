@@ -58,6 +58,9 @@ Descope also has guides and templates you can use, to see how Descope integrates
 - **[Webflow](https://docs.descope.com/web-development-platforms/setup-guides/webflow)** - ([Template](https://webflow.com/made-in-webflow/website/terminal-descope))
 - **[Retool](https://docs.descope.com/sso-integrations/applications/setup-guides/retool-oidc)**
 
+### Browser Extensions
+- **[Chrome Extension](https://github.com/descope-sample-apps/chrome-extension)**
+
 ## 🔗 Descope and OpenID Connect
 
 If you're using Descope as a Federated IdP (Identity Provider), you can refer to either the [main documentation](https://docs.descope.com/customize/auth/oidc/) on how to set it up, or you can review a few of the tutorials published that showcase how to use Descope with many major existing identity providers:
