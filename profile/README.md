@@ -57,6 +57,7 @@ Descope also has guides and templates you can use, to see how Descope integrates
 - **[Okta](https://docs.descope.com/sso/sso-configuration/setup-guides/okta)**
 - **[Webflow](https://docs.descope.com/web-development-platforms/setup-guides/webflow)** - ([Template](https://webflow.com/made-in-webflow/website/terminal-descope))
 - **[Retool](https://docs.descope.com/sso-integrations/applications/setup-guides/retool-oidc)**
+- **[Chrome Extension](https://github.com/descope-sample-apps/chrome-extension)**
 
 ## 🔗 Descope and OpenID Connect
 
