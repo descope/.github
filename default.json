@@ -1,8 +1,9 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
-    "config:base",
+    "config:best-practices",
     ":preserveSemverRanges",
+    ":pinVersions",
     ":combinePatchMinorReleases",
     ":rebaseStalePrs",
     "workarounds:all",
