@@ -23,7 +23,7 @@ runs:
       uses: snok/install-poetry@76e04a911780d5b312d89783f7b1cd627778900a # v1.4.1
     - name: Load cached venv
       id: cached-poetry-dependencies
-      uses: actions/cache@0057852bfaa89a56745cba8c7296529d2fc39830 # v4.3.0
+      uses: actions/cache@8b402f58fbc84540c8b491a91e594a4576fec3d7 # v5.0.2
       with:
         path: .venv
         key: venv-${{ runner.os }}-${{ steps.setup-python.outputs.python-version }}-${{ hashFiles('**/poetry.lock') }}
