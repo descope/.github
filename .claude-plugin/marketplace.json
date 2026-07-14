@@ -1,0 +1,15 @@
+{
+  "name": "descope",
+  "owner": {
+    "name": "Descope",
+    "email": "dev@descope.com"
+  },
+  "plugins": [
+    {
+      "name": "hello-descope",
+      "source": "./plugins/hello-descope",
+      "description": "Sample plugin that greets you on session start",
+      "version": "0.1.0"
+    }
+  ]
+}

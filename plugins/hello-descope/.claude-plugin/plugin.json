@@ -1,0 +1,10 @@
+{
+  "name": "hello-descope",
+  "displayName": "Hello Descope",
+  "version": "0.1.0",
+  "description": "Sample Descope Claude Code plugin — prints a greeting on session start",
+  "author": {
+    "name": "Descope"
+  },
+  "hooks": "./hooks/hooks.json"
+}
