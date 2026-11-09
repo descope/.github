@@ -396,8 +396,43 @@
    ]
   },
   {
-   "type": "table",
+   "type": "cards",
    "num": "12",
+   "title": "Expose it to your users: drop-in web components",
+   "intro": "Descope widgets are embeddable web components: add the UI in a few lines instead of building it.",
+   "cards": [
+    {
+     "title": "Outbound Applications widget",
+     "bullets": [
+      "A \"Connected accounts\" page inside your product",
+      "Users connect or disconnect Google, Slack, Salesforce",
+      "Think of Calendly's calendar connections screen",
+      "Tokens land in the Descope vault automatically"
+     ],
+     "highlight": true
+    },
+    {
+     "title": "Applications Portal widget",
+     "bullets": [
+      "A user-facing list of the apps they can open",
+      "One place for users to launch connected apps",
+      "Embed in your app or host it in the Admin Portal"
+     ]
+    },
+    {
+     "title": "Access Key widgets",
+     "bullets": [
+      "B2B admins create and rotate their own API keys",
+      "Users can manage personal keys for scripts and jobs",
+      "Self-service M2M setup, no support tickets",
+      "Scoped to the customer's tenant"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "table",
+   "num": "13",
    "title": "Which app do I need?",
    "highlightCol": 1,
    "headers": [
