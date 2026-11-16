@@ -28,7 +28,7 @@ runs:
   steps:
     - name: Extract metadata (tags, labels) for Docker
       id: meta
-      uses: descope/.github/.github/actions/docker/metadata@c0f1e4603b33d99366c89525ff90c410115dad95 # main
+      uses: descope/.github/.github/actions/docker/metadata@95eeb56e2cef06d256e8962fad2067d8f8a91297 # main
       with:
         images: |
           ${{inputs.image-name}}
